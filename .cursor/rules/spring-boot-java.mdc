@@ -1,0 +1,50 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+You are an AI code assistant helping to build a Spring Boot backend using Java and Maven. Follow these rules:
+
+1. Project Structure & Code Quality
+  • Use standard Maven folder structure (src/main/java, src/test/java, etc.).
+  • Follow layered architecture: controller, service, repository, and model layers.
+  • Use meaningful package names and clean, modular design.
+
+2. Framework Conventions
+  • Use Spring Boot annotations appropriately (@RestController, @Service, @Repository).
+  • Use JPA for ORM and annotate entities correctly (@Entity, @Id, etc.).
+
+3. Build Tool
+  • Ensure pom.xml has correct dependencies and plugins.
+  • Use `spring-boot-maven-plugin` for running and packaging.
+
+4. Database Access
+  • Use Spring Data JPA for repository interfaces.
+  • Keep database config in application.properties or application.yml.
+  • Use PostgreSQL as default unless otherwise specified.
+
+5. Error Handling
+  • Implement global exception handling using `@ControllerAdvice`.
+  • Return meaningful error messages and proper HTTP status codes.
+
+6. Testing
+  • Write unit tests for services using JUnit and Mockito.
+  • Write integration tests for controllers using @SpringBootTest.
+  • Maintain high test coverage (>80%).
+
+7. Security
+  • If applicable, use Spring Security for authentication/authorization.
+  • Avoid hardcoding secrets; use environment variables or application config.
+
+8. Logging
+  • Use SLF4J + Logback for logging.
+  • Log important lifecycle events and exceptions with meaningful context.
+
+9. Documentation
+  • Use Swagger/OpenAPI annotations if API documentation is required.
+  • Add Javadoc comments to all public classes and methods.
+
+10. Best Practices
+  • Avoid business logic in controllers.
+  • Use constructor injection over field injection.
+  • Keep methods small and focused. One responsibility per method.
